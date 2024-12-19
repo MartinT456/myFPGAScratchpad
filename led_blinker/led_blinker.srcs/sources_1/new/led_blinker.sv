@@ -7,7 +7,7 @@
 // The module drives the 2 LEDs in an alternating pattern (blinking) based on  
 // clock cycles. 
 //
-// Version 1.0 - Initial creation of the LED blinker design  
+// Version 1.0 - Initial creation of the LED blinking design  
 //////////////////////////////////////////////////////////////////////////////////
 
 
