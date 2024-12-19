@@ -28,3 +28,18 @@
     <Process Command="vivado.bat" Owner="Martin" Host="DESKTOP-QQS53RN" Pid="17772" HostCore="12" HostMemory="034282364928">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Martin" Host="DESKTOP-QQS53RN" Pid="11760" HostCore="12" HostMemory="034282364928">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Martin" Host="DESKTOP-QQS53RN" Pid="1828" HostCore="12" HostMemory="034282364928">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Martin" Host="DESKTOP-QQS53RN" Pid="13472" HostCore="12" HostMemory="034282364928">
+    </Process>
+</ProcessHandle>

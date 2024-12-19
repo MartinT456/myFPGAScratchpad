@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Wed Dec 18 15:41:15 2024
+| Date         : Wed Dec 18 16:23:22 2024
 | Host         : DESKTOP-QQS53RN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file led_blinker_utilization_placed.rpt -pb led_blinker_utilization_placed.pb
 | Design       : led_blinker
@@ -69,9 +69,9 @@ Table of Contents
 +------------------------------------------+------+-------+------------+-----------+-------+
 |                 Site Type                | Used | Fixed | Prohibited | Available | Util% |
 +------------------------------------------+------+-------+------------+-----------+-------+
-| Slice                                    |   13 |     0 |          0 |      8150 |  0.16 |
-|   SLICEL                                 |    7 |     0 |            |           |       |
-|   SLICEM                                 |    6 |     0 |            |           |       |
+| Slice                                    |   12 |     0 |          0 |      8150 |  0.15 |
+|   SLICEL                                 |   11 |     0 |            |           |       |
+|   SLICEM                                 |    1 |     0 |            |           |       |
 | LUT as Logic                             |   21 |     0 |          0 |     20800 |  0.10 |
 |   using O5 output only                   |    0 |       |            |           |       |
 |   using O6 output only                   |    8 |       |            |           |       |
@@ -122,8 +122,8 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    4 |     2 |          0 |       106 |  3.77 |
-|   IOB Master Pads           |    1 |       |            |           |       |
+| Bonded IOB                  |    4 |     4 |          0 |       106 |  3.77 |
+|   IOB Master Pads           |    2 |       |            |           |       |
 |   IOB Slave Pads            |    2 |       |            |           |       |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |

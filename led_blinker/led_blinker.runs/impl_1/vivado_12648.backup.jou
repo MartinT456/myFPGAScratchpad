@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Wed Dec 18 16:22:06 2024
-# Process ID         : 4068
-# Current directory  : F:/FPGA Projects/led_blinker/led_blinker.runs/synth_1
-# Command line       : vivado.exe -log led_blinker.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_blinker.tcl
-# Log file           : F:/FPGA Projects/led_blinker/led_blinker.runs/synth_1/led_blinker.vds
-# Journal file       : F:/FPGA Projects/led_blinker/led_blinker.runs/synth_1\vivado.jou
+# Start of session at: Wed Dec 18 16:22:58 2024
+# Process ID         : 12648
+# Current directory  : F:/FPGA Projects/led_blinker/led_blinker.runs/impl_1
+# Command line       : vivado.exe -log led_blinker.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source led_blinker.tcl -notrace
+# Log file           : F:/FPGA Projects/led_blinker/led_blinker.runs/impl_1/led_blinker.vdi
+# Journal file       : F:/FPGA Projects/led_blinker/led_blinker.runs/impl_1\vivado.jou
 # Running On         : DESKTOP-QQS53RN
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 19045
@@ -19,6 +19,6 @@
 # Host memory        : 34282 MB
 # Swap memory        : 5100 MB
 # Total Virtual      : 39382 MB
-# Available Virtual  : 24602 MB
+# Available Virtual  : 24600 MB
 #-----------------------------------------------------------
 source led_blinker.tcl -notrace
