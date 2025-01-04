@@ -1,0 +1,8 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+F:/FPGA_Projects/UART_COMD_A735T/UART_COMD_A735T.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
+F:/FPGA_Projects/UART_COMD_A735T/UART_COMD_A735T.srcs/sim_1/new/UART_TB.sv,1736015437,systemVerilog,,,,UART_TB,,uvm,,,,,,
+F:/FPGA_Projects/UART_COMD_A735T/UART_COMD_A735T.srcs/sources_1/new/UART_RX_COMD_A735T.sv,1736014579,systemVerilog,,F:/FPGA_Projects/UART_COMD_A735T/UART_COMD_A735T.srcs/sources_1/new/UART_TX_COMD_A735T.sv,,UART_RX_COMD_A735T,,uvm,,,,,,
+F:/FPGA_Projects/UART_COMD_A735T/UART_COMD_A735T.srcs/sources_1/new/UART_TX_COMD_A735T.sv,1736014579,systemVerilog,,F:/FPGA_Projects/UART_COMD_A735T/UART_COMD_A735T.srcs/sim_1/new/UART_TB.sv,,UART_TX_COMD_A735T,,uvm,,,,,,

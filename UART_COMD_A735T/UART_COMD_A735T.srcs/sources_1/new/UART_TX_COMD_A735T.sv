@@ -25,7 +25,7 @@ module UART_TX_COMD_A735T(
     input logic clk,             // System clock 12MHz
     input logic reset,
     input logic [7:0] data,
-    input logic send,            // Start bit trigger
+    input logic start,            // Start bit trigger
     output logic tx,        // UART tx line
     output logic busy            // Line busy flag
     );
@@ -56,7 +56,7 @@ module UART_TX_COMD_A735T(
                     tx <= 1'b1;
                     busy <= 1'b0;
                     baud_count <= 16'd0;
-                    if (send) begin
+                    if (start) begin
                         state <= START;
                         shift_reg <= data;
                         busy <= 1'b1;

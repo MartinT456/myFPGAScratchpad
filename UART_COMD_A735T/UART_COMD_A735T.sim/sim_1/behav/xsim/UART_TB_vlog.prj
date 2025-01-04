@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../UART_COMD_A735T.srcs/sources_1/new/UART_RX_COMD_A735T.sv" \
+"../../../../UART_COMD_A735T.srcs/sources_1/new/UART_TX_COMD_A735T.sv" \
+"../../../../UART_COMD_A735T.srcs/sim_1/new/UART_TB.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
