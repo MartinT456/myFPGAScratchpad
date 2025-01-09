@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jan  9 09:36:09 2025
+# Process ID         : 14408
+# Current directory  : F:/FPGA_Projects/UART_CMOD_A735T
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent3364 F:\FPGA_Projects\UART_CMOD_A735T\UART_CMOD_A735T.xpr
+# Log file           : F:/FPGA_Projects/UART_CMOD_A735T/vivado.log
+# Journal file       : F:/FPGA_Projects/UART_CMOD_A735T\vivado.jou
+# Running On         : DESKTOP-QQS53RN
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 5 3600 6-Core Processor              
+# CPU Frequency      : 3600 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 34282 MB
+# Swap memory        : 5100 MB
+# Total Virtual      : 39382 MB
+# Available Virtual  : 30230 MB
+#-----------------------------------------------------------
+start_gui
+open_project F:/FPGA_Projects/UART_CMOD_A735T/UART_CMOD_A735T.xpr
+update_compile_order -fileset sources_1
+close_project
+create_project UART_SERIAL_TESTING F:/FPGA_Projects/UART_SERIAL_TESTING -part xc7k70tfbv676-1
+add_files -norecurse {F:/FPGA_Projects/UART_CMOD_A735T/UART_CMOD_A735T.srcs/sources_1/new/UART_RX_CMOD_A735T.sv F:/FPGA_Projects/UART_CMOD_A735T/UART_CMOD_A735T.srcs/sources_1/new/UART_TX_CMOD_A735T.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse F:/FPGA_Projects/UART_CMOD_A735T/UART_CMOD_A735T.srcs/constrs_1/new/constraints.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+remove_files  {F:/FPGA_Projects/UART_CMOD_A735T/UART_CMOD_A735T.srcs/sources_1/new/UART_RX_CMOD_A735T.sv F:/FPGA_Projects/UART_CMOD_A735T/UART_CMOD_A735T.srcs/sources_1/new/UART_TX_CMOD_A735T.sv}
+file mkdir F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new
+close [ open F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new/blk.sv w ]
+add_files F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new/blk.sv
+add_files -norecurse {F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new/UART_TX_CMOD_A735T.sv F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new/UART_RX_CMOD_A735T.sv}
+update_compile_order -fileset sources_1
+remove_files  F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new/blk.sv
+file delete -force F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new/blk.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new/UART_TEST.sv w ]
+add_files F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.srcs/sources_1/new/UART_TEST.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -url localhost:3121 -allow_non_jtag
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210328BB1590A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210328BB1590A]
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
