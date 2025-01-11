@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1736562125">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1736581638">
   <File Type="PA-TCL" Name="UART_TEST.tcl"/>
   <File Type="REPORTS-TCL" Name="UART_TEST_reports.tcl"/>
   <File Type="INIT-TIMING" Name="UART_TEST_timing_summary_init.rpt"/>

@@ -38,47 +38,14 @@ module UART_TEST(
     
     logic [7:0] rx_data;
     logic rx_valid;
-    
-    // Figure out why this counter block doesn't allow RX to occur
+
+    // Takes RX and echos it as TX
     /*
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             counter <= 8'd0;
-            delay_counter <= 32'd0;
             tx_start <= 1'b0;
-        end else if ((tx_busy == 1'b0) && (delay_counter >= CLK_FREQ)) begin
-            delay_counter <= 32'd0;
-            counter <= counter + 1;
-            tx_start <= 1'b1;
-        end else begin
-            delay_counter <= delay_counter + 1;
-            tx_start <= 1'b0;
-        end                 
-    end
-    */
-    
-    always_ff @(posedge clk or posedge reset) begin
-        if (reset) begin
-            counter <= 8'd0;
-            //delay_counter <= 32'd0;
-            tx_start <= 1'b0;
-        end else if ((tx_busy == 1'b0) && (rx_valid)) begin
-            //delay_counter <= 32'd0;
-            counter <= rx_data;
-            tx_start <= 1'b1;
-        end else begin
-            delay_counter <= delay_counter + 1;
-            tx_start <= 1'b0;
-        end                 
-    end
-    /*
-    always_ff @(posedge clk or posedge reset) begin
-        if (reset) begin
-            counter <= 8'd0;
-            delay_counter <= 32'd0;
-            tx_start <= 1'b0;
-        end else if ((tx_busy == 1'b0) && (delay_counter >= CLK_FREQ)) begin
-            delay_counter <= 32'd0;
+        end else if ((tx_busy == 1'b0) && (rx_valid)) begin         
             counter <= rx_data;
             tx_start <= 1'b1;
         end else begin
@@ -88,18 +55,37 @@ module UART_TEST(
     end
     */
     
-    // RX Logic
-    /*
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            counter <= 8'd47;
+            delay_counter <= 32'd0;
+            tx_start <= 1'b0;
+        end else if ((tx_busy == 1'b0) && (delay_counter >= CLK_FREQ)) begin
+            delay_counter <= 32'd0;
+            if (counter == 8'd57) begin // Go back to ASCII '0' after '9'
+                counter <= 8'd48;
+            end else begin
+                counter <= counter + 1;
+            end
+            tx_start <= 1'b1; // Start TX
+        end else begin
+            delay_counter <= delay_counter + 1;
+            tx_start <= 1'b0;
+        end                
+    end
+    
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             leds <= 2'b01;
         end else if (rx_valid) begin
-            leds <= ~leds;              // Swap leds on successful RX
+            leds <= ~leds; // Swap leds on successful RX
         end
+        
+
     end
-    */
     
-    // TX Instantiation
+    
+        // TX Instantiation
     UART_TX_CMOD_A735T #(
         .BAUD_RATE(BAUD_RATE),
         .CLK_FREQ(CLK_FREQ)
@@ -124,3 +110,10 @@ module UART_TEST(
     );
     
 endmodule
+
+    
+
+
+    
+    
+

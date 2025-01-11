@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Jan 10 18:23:05 2025
+| Date         : Fri Jan 10 23:48:18 2025
 | Host         : DESKTOP-QQS53RN running 64-bit major release  (build 9200)
 | Command      : report_methodology -file UART_TEST_methodology_drc_routed.rpt -pb UART_TEST_methodology_drc_routed.pb -rpx UART_TEST_methodology_drc_routed.rpx
 | Design       : UART_TEST
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 3
+             Checks found: 5
 +-----------+----------+-------------------------------+--------+
 | Rule      | Severity | Description                   | Checks |
 +-----------+----------+-------------------------------+--------+
-| TIMING-18 | Warning  | Missing input or output delay | 3      |
+| TIMING-18 | Warning  | Missing input or output delay | 5      |
 +-----------+----------+-------------------------------+--------+
 
 2. REPORT DETAILS
@@ -43,6 +43,16 @@ An input delay is missing on rx relative to the rising and/or falling clock edge
 Related violations: <none>
 
 TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on leds[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on leds[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#5 Warning
 Missing input or output delay  
 An output delay is missing on tx relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>

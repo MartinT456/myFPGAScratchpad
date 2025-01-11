@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Jan 10 18:17:46 2025
-# Process ID         : 17588
+# Start of session at: Fri Jan 10 23:46:23 2025
+# Process ID         : 15260
 # Current directory  : F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.runs/synth_1
 # Command line       : vivado.exe -log UART_TEST.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_TEST.tcl
 # Log file           : F:/FPGA_Projects/UART_SERIAL_TESTING/UART_SERIAL_TESTING.runs/synth_1/UART_TEST.vds
@@ -19,6 +19,6 @@
 # Host memory        : 34282 MB
 # Swap memory        : 5100 MB
 # Total Virtual      : 39382 MB
-# Available Virtual  : 23396 MB
+# Available Virtual  : 19866 MB
 #-----------------------------------------------------------
 source UART_TEST.tcl -notrace

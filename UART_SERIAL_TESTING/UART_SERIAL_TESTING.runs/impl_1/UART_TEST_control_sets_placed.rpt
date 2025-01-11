@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Jan 10 18:22:39 2025
+| Date         : Fri Jan 10 23:47:52 2025
 | Host         : DESKTOP-QQS53RN running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file UART_TEST_control_sets_placed.rpt
 | Design       : UART_TEST
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     9 |
-|    Minimum number of control sets                        |     9 |
+| Total control sets                                       |     7 |
+|    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     8 |
+| Unused register locations in slices containing registers |    14 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     9 |
+| Total control sets |     7 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     5 |
+| >= 8 to < 10       |     2 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     3 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |               8 |            2 |
+| No           | No                    | Yes                    |              42 |           12 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              16 |            2 |
-| Yes          | No                    | Yes                    |              56 |           15 |
+| Yes          | No                    | No                     |               8 |            1 |
+| Yes          | No                    | Yes                    |              48 |           12 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,18 +70,16 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+----------------------------------------+------------------+------------------+----------------+--------------+
-|  Clock Signal  |              Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+----------------------------------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | uart_rx_inst/bit_index                 | reset_IBUF       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | uart_tx_inst/bit_index                 | reset_IBUF       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG |                                        | reset_IBUF       |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | uart_rx_inst/data[7]_i_1_n_0           | reset_IBUF       |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | uart_rx_inst/shift_reg[7]_i_1__0_n_0   |                  |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | uart_rx_inst/E[0]                      | reset_IBUF       |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | uart_tx_inst/shift_reg[7]_i_1_n_0      |                  |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | uart_rx_inst/baud_count[15]_i_1__0_n_0 | reset_IBUF       |                5 |             16 |         3.20 |
-|  clk_IBUF_BUFG | uart_tx_inst/baud_count_0              | reset_IBUF       |                5 |             16 |         3.20 |
-+----------------+----------------------------------------+------------------+------------------+----------------+--------------+
++----------------+-----------------------------------+------------------+------------------+----------------+--------------+
+|  Clock Signal  |           Enable Signal           | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------+------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | uart_rx_inst/bit_index            | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | uart_tx_inst/bit_index            | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | uart_tx_inst/E[0]                 | reset_IBUF       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | uart_tx_inst/shift_reg[7]_i_1_n_0 |                  |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | uart_rx_inst/baud_count           | reset_IBUF       |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG | uart_tx_inst/baud_count_0         | reset_IBUF       |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG |                                   | reset_IBUF       |               12 |             42 |         3.50 |
++----------------+-----------------------------------+------------------+------------------+----------------+--------------+
 
 

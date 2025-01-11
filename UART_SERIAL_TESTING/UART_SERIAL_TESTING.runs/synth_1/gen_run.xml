@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1736561863" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/UART_TEST.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1736581580" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/UART_TEST.dcp">
   <File Type="PA-TCL" Name="UART_TEST.tcl"/>
   <File Type="REPORTS-TCL" Name="UART_TEST_reports.tcl"/>
   <File Type="RDS-RDS" Name="UART_TEST.vds"/>
