@@ -77,8 +77,8 @@ module UART_TX_CMOD_A735T(
                     if (baud_count == BIT_TIME - 1) begin
                         baud_count <= 16'd0;
                         shift_reg <= shift_reg >> 1;
-                        bit_index <= bit_index + 1;
-                        if (bit_index == 7) state <= STOP;   
+                        if (bit_index == 7) state <= STOP;  
+                        bit_index <= bit_index + 1; 
                     end else begin
                         baud_count <= baud_count + 1;
                     end
@@ -88,7 +88,7 @@ module UART_TX_CMOD_A735T(
                     if (baud_count == BIT_TIME - 1) begin
                         state <= IDLE;
                     end else begin
-                        baud_count <= 16'd0;
+                        baud_count <= baud_count + 1;
                     end
                 end
             endcase   

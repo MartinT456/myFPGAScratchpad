@@ -21,11 +21,11 @@
 
 
 module UART_RX_CMOD_A735T(
-    input wire clk,          // System clock
-    input wire reset,        // Reset signal
-    input wire rx,           // Serial data input
-    output reg [7:0] data,   // Parallel data output
-    output reg valid         // Data valid signal
+    input logic clk,          // System clock
+    input logic reset,        // Reset signal
+    input logic rx,           // Serial data input
+    output logic [7:0] data,   // Parallel data output
+    output logic valid         // Data valid signal
     );
     
     parameter int BAUD_RATE = 9600;
@@ -58,6 +58,7 @@ module UART_RX_CMOD_A735T(
                 START: begin
                     if (baud_count == (BIT_TIME / 2) - 1) begin // Synchronize with center of start bit for accurate data sampling
                         baud_count <= 16'd0;
+                        bit_index <= 4'd0;
                         state <= DATA;
                     end else begin
                         baud_count <= baud_count + 1;
@@ -67,8 +68,12 @@ module UART_RX_CMOD_A735T(
                     if (baud_count == BIT_TIME - 1) begin
                         baud_count <= 16'd0;
                         shift_reg <= {rx, shift_reg[7:1]}; // Shift in bits
-                        bit_index <= bit_index + 1;
-                        if (bit_index == 7) state <= STOP;
+                        if (bit_index == 7) begin
+                            state <= STOP;
+                        end else begin
+                            bit_index <= bit_index + 1;
+                        end
+                        
                     end else begin
                         baud_count <= baud_count + 1;
                     end

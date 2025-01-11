@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1736452072" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/UART_TEST.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1736561863" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/UART_TEST.dcp">
   <File Type="PA-TCL" Name="UART_TEST.tcl"/>
   <File Type="REPORTS-TCL" Name="UART_TEST_reports.tcl"/>
   <File Type="RDS-RDS" Name="UART_TEST.vds"/>
@@ -66,9 +66,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -33,35 +33,71 @@ module UART_TEST(
     
     // Counter
     logic [7:0] counter;
-    //logic [31:0] delay_counter;
+    logic [31:0] delay_counter;
     logic tx_start, tx_busy;
     
     logic [7:0] rx_data;
     logic rx_valid;
     
-    // TX logic
+    // Figure out why this counter block doesn't allow RX to occur
+    /*
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            counter <= 8'd0;
+            delay_counter <= 32'd0;
+            tx_start <= 1'b0;
+        end else if ((tx_busy == 1'b0) && (delay_counter >= CLK_FREQ)) begin
+            delay_counter <= 32'd0;
+            counter <= counter + 1;
+            tx_start <= 1'b1;
+        end else begin
+            delay_counter <= delay_counter + 1;
+            tx_start <= 1'b0;
+        end                 
+    end
+    */
+    
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             counter <= 8'd0;
             //delay_counter <= 32'd0;
             tx_start <= 1'b0;
-        end else if (tx_busy == 1'b0) begin
-            counter <= counter + 1;
+        end else if ((tx_busy == 1'b0) && (rx_valid)) begin
+            //delay_counter <= 32'd0;
+            counter <= rx_data;
             tx_start <= 1'b1;
         end else begin
-            //delay_counter <= delay_counter + 1;
+            delay_counter <= delay_counter + 1;
             tx_start <= 1'b0;
         end                 
     end
-    
-    // RX Logic
+    /*
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
-            leds <= 2'b11;
-        end else if (rx_data) begin
-            leds <= 2'b00;;              // Swap leds on successful RX
+            counter <= 8'd0;
+            delay_counter <= 32'd0;
+            tx_start <= 1'b0;
+        end else if ((tx_busy == 1'b0) && (delay_counter >= CLK_FREQ)) begin
+            delay_counter <= 32'd0;
+            counter <= rx_data;
+            tx_start <= 1'b1;
+        end else begin
+            delay_counter <= delay_counter + 1;
+            tx_start <= 1'b0;
+        end                 
+    end
+    */
+    
+    // RX Logic
+    /*
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            leds <= 2'b01;
+        end else if (rx_valid) begin
+            leds <= ~leds;              // Swap leds on successful RX
         end
     end
+    */
     
     // TX Instantiation
     UART_TX_CMOD_A735T #(
