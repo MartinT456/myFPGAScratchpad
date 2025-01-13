@@ -1,17 +1,27 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 01/12/2025 05:44:45 PM
-// Design Name: 
+// Written by: Martin Tran 
+// Create Date: 01/12/2025 
 // Module Name: tb_convolution_2d
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
+//
 // Description: 
-// 
-// Dependencies: 
+// The testbench verifies the functionality of the 2D convolution module by simulating its behavior under controlled conditions.
+//
+// Testbench Purpose:
+// Validates the correctness of the 2D convolution module by applying known inputs and comparing the module's outputs against expected results.
+// Ensures proper reset functionality and clock-driven operation.
+//
+// Key Components:
+// Clock Generator: A simple always block toggles the clock signal.
+// Reset Logic: Asserts the reset signal at the beginning of the simulation to initialize the module.
+// Input Initialization: Loads the 5x5 image and 3x3 kernel with test values.
+// Output Monitoring: Compares the result output against pre-calculated expected values.
+//
+// Steps Performed:
+// The image and kernel matrices are initialized with specific values.
+// The clock starts, and the reset signal is asserted and deasserted.
+// The module processes the input matrices, and the testbench monitors the result matrix.
+// The testbench checks the output against expected values, logging pass/fail status for each output pixel.
 // 
 // Revision:
 // Revision 0.01 - File Created

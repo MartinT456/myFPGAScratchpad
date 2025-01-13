@@ -1,18 +1,26 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// WRitten by: Martin Tran
+// Written by: Martin Tran
 // Create Date: 01/11/2025
 // Module Name: convolution_2d
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// The 2D convolution module computes the convolution of a 5x5 image with a 3x3 kernel, producing a 3x3 output matrix. This module demonstrates basic image processing using SystemVerilog. Below is the description:
+//
+// Module Purpose:
+// Performs 2D convolution by sliding a 3x3 kernel over a 5x5 input image.
+// Each output pixel is calculated as the sum of element-wise multiplications of the kernel and a corresponding 3x3 sub-region of the input image.
+//
+// Inputs:
+// clk: System clock.
+// reset: Resets the module, clearing the output matrix.
+// image: A 5x5 matrix representing the input image, where each pixel is an 8-bit value.
+// kernel: A 3x3 matrix representing the convolution kernel, where each value is an 8-bit coefficient.
+//
+// Outputs:
+// result: A 3x3 output matrix representing the convolution result. Each value is a 16-bit signed value to accommodate the sum of 8-bit multiplications.
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
