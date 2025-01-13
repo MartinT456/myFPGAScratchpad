@@ -16,18 +16,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module convolution_2d(
-    input logic clk,
-    input logic reset,
-    input logic [7:0] img [0:4][0:4], // 5x5 image with 8-bit pixels
-    input logic [7:0] kernel [0:2][0:2], //3x3 convolution kernel
-    output logic [15:0] result [0:2][0:2]
-    );
+
     
-    logic [15:0] mult_result [0:2][0:2]; // Used to store multiplication
-    logic [15:0] sum_result; // Sum of products for each pixel
-    
-    module convolution_2d (
+module convolution_2d (
     input logic clk,                   // Clock signal
     input logic reset,                 // Reset signal
     input logic [7:0] image [0:4][0:4], // Input 5x5 image (8-bit pixels)
