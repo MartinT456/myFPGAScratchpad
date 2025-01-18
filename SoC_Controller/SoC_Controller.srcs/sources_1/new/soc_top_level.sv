@@ -74,7 +74,7 @@ module soc_top_level(
         .read_data(reg_data_out)
     );
 
-    alu alu_inst (
+    soc_alu alu_inst (
         .operand_a(alu_operand_a),
         .operand_b(alu_operand_b),
         .opcode(alu_opcode),
@@ -82,7 +82,7 @@ module soc_top_level(
         .zero_flag(alu_zero_flag)
     );
 
-    timer timer_inst (
+    soc_timer timer_inst (
         .clk(clk),
         .reset(reset),
         .enable(1'b1),
