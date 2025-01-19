@@ -64,7 +64,7 @@ module soc_top_level(
         .tx_busy(tx_busy)
     );
 
-    register_file reg_file_inst (
+    soc_register_file reg_file_inst (
         .clk(clk),
         .reset(reset),
         .write_enable(write_enable),

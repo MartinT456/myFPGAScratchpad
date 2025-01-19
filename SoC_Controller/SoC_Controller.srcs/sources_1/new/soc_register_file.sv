@@ -18,7 +18,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module register_file #(
+module soc_register_file #(
     parameter ADDR_WIDTH = 4, // Number of registers (2^ADDR_WIDTH)
     parameter DATA_WIDTH = 32
 )(
