@@ -31,6 +31,6 @@ module aes_core(
     logic [127:0] round_keys [0:10]; // 11 keys for AES-128
     int round; // keeping track of current round
     
-    ///// TODO: shift_rows, mix_columns, 
+    ///// TODO: key expansion, sub bytes, shift rows, mix columns 
     
 endmodule
