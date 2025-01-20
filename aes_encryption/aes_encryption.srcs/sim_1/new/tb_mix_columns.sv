@@ -1,22 +1,23 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Written by: Martin Tran
 // 
 // Create Date: 01/19/2025
-// Design Name: 
+//
 // Module Name: tb_mix_columns
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
+// Project Name: aes_encryption
+//
 // Description: 
+// This file contains the testbench for verifying the functionality of the 
+// mix_columns module, which implements the MixColumns transformation in the 
+// AES encryption process. MixColumns is responsible for mixing the data within 
+// each column of the AES state matrix to achieve diffusion, a necessary property 
+// for the security of the cipher.
 // 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// The testbench is designed to validate that the mix_columns module correctly 
+// performs the Galois field matrix multiplication as specified by the AES standard.
+// It compares the module's outputs to known expected values to ensure the 
+// implementation is accurate.
 //////////////////////////////////////////////////////////////////////////////////
 
 

@@ -1,20 +1,18 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Written by: Martin Tran
+//
 // Create Date: 01/19/2025
-// Design Name: 
+// 
 // Module Name: tb_sub_bytes
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
+// Project Name: aes_encryption
+// 
 // Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// The testbench ensures that the sub_bytes module performs the byte-by-byte 
+// substitution correctly, as per the AES standard. It tests the module using 
+// a variety of input values to confirm accuracy by taking the output from the 
+// uut and compares it to the pre-calculated expected result of the transformation.
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
