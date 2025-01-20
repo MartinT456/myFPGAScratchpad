@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_mix_columns_behav/xsimk.exe -simmode gui -wdb tb_mix_columns_behav.wdb -simrunnum 0 -socket 52052
+Design successfully loaded
+Design Loading Memory Usage: 26968 KB (Peak: 26968 KB)
+Design Loading CPU Usage: 749 ms
+Simulation completed
+Simulation Memory Usage: 27624 KB (Peak: 27624 KB)
+Simulation CPU Usage: 827 ms

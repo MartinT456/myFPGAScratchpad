@@ -3,19 +3,26 @@
 // Written by: Martin Tran
 // 
 // Create Date: 01/18/2025 
-// Design Name: 
+//
 // Module Name: key_expansion
 // Project Name: aes_encryption
-// Target Devices: 
-// Tool Versions: 
+//
 // Description: 
 // 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// This file implements the key_expansion module, a component of the AES-128
+// encryption algorithm. The key_expansion module generates 11 round keys, each 128 bits long, 
+// from an initial 128-bit cipher key, following the AES key schedule specification. These
+// round keys are used during the encryption process to perform transformations on the plaintext.
+//
+// Interface:
+//
+// Inputs:
+// clk: A clock signal driving the module.
+// reset: Active-high reset signal that clears all round keys.
+// key:The 128-bit cipher key used to derive the round keys.
+//
+// Outputs:
+// round_keys:Array of 11 round keys, each 128 bits.
 //////////////////////////////////////////////////////////////////////////////////
 
 

@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
-"../../../../aes_encryption.srcs/sources_1/new/sub_bytes.sv" \
-"../../../../aes_encryption.srcs/sim_1/new/tb_sub_bytes.sv" \
+"../../../../aes_encryption.srcs/sources_1/new/key_expansion.sv" \
+"../../../../aes_encryption.srcs/sim_1/new/tb_key_expansion.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

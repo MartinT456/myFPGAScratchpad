@@ -1,0 +1,38 @@
+Time resolution is 1 ps
+Test 1: Key = 00000000000000000000000000000000
+Round 0 Key: 00000000000000000000000000000000
+Round 1 Key: 62636363626363636263636362636363
+Round 2 Key: 9b9898c9f9fbfbaa9b9898c9f9fbfbaa
+Round 3 Key: 90973450696ccffaf2f457330b0fac99
+Round 4 Key: ee06da7b876a1581759e42b27e91ee2b
+Round 5 Key: 7f2e2b88f8443e098dda7cbbf34b9290
+Round 6 Key: ec614b851425758c99ff09376ab49ba7
+Round 7 Key: 217517873550620bacaf6b3cc61bf09b
+Round 8 Key: 0ef903333ba9613897060a04511dfa9f
+Round 9 Key: b1d4d8e28a7db9da1d7bb3de4c664941
+Round 10 Key: b4ef5bcb3e92e21123e951cf6f8f188e
+Test 2: Key = ffffffffffffffffffffffffffffffff
+Round 0 Key: ffffffffffffffffffffffffffffffff
+Round 1 Key: e8e9e9e917161616e8e9e9e917161616
+Round 2 Key: adaeae19bab8b80f525151e6454747f0
+Round 3 Key: 090e2277b3b69a78e1e7cb9ea4a08c6e
+Round 4 Key: e16abd3e52dc2746b33becd8179b60b6
+Round 5 Key: e5baf3ceb766d488045d385013c658e6
+Round 6 Key: 71d07db3c6b6a93bc2eb916bd12dc98d
+Round 7 Key: e90d208d2fbb89b6ed5018dd3c7dd150
+Round 8 Key: 96337366b988fad054d8e20d68a5335d
+Round 9 Key: 8bf03f233278c5f366a027fe0e0514a3
+Round 10 Key: d60a3588e472f07b82d2d7858cd7c326
+Test 3: Key = 7ecadb064e95916336bf0d76b5a8f483
+Round 0 Key: 7ecadb064e95916336bf0d76b5a8f483
+Round 1 Key: bd7537d3f3e0a6b0c55fabc670f75f45
+Round 2 Key: d7ba5982245aff32e10554f491f20bb1
+Round 3 Key: 5a9191037ecb6e319fce3ac50e3c3174
+Round 4 Key: b95603a8c79d6d995853575c566f6628
+Round 5 Key: 01653719c6f85a809eab0ddcc8c46bf4
+Round 6 Key: 3d1a88f1fbe2d2716549dfadad8db459
+Round 7 Key: 20974364db759115be3c4eb813b1fae1
+Round 8 Key: 68babb19b3cf2a0c0df364b41e429e55
+Round 9 Key: 5fb1476bec7e6d67e18d09d3ffcf9786
+Round 10 Key: e339037d0f476e1aeeca67c91105f04f
+$stop called at time : 185 ns : File "F:/FPGA_Projects/aes_encryption/aes_encryption.srcs/sim_1/new/tb_key_expansion.sv" Line 110

@@ -38,7 +38,7 @@ module tb_sub_bytes;
     endtask
     
     initial begin
-        $display("Starting SubBytes Testbench...");
+        $display("Starting sub_bytes Testbench...");
 
         // Test 1
         state_in = 128'h00112233445566778899aabbccddeeff; 
@@ -59,7 +59,7 @@ module tb_sub_bytes;
         state_in = 128'ha3f9d4e7c81245b6f0ea34dc87ab1254;
         #10;
         display_test_result(state_in, 128'h0a994894e8c96e4e8c8718861762c920, state_out);
-        $display("SubBytes Testbench Completed.");
+        $display("sub_bytes Testbench Completed.");
         $stop;
     end
 endmodule
