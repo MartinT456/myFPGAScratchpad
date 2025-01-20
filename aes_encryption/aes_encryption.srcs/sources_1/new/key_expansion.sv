@@ -17,12 +17,12 @@
 // Interface:
 //
 // Inputs:
-// clk: A clock signal driving the module.
-// reset: Active-high reset signal that clears all round keys.
-// key:The 128-bit cipher key used to derive the round keys.
+// - clk: A clock signal driving the module.
+// - reset: Active-high reset signal that clears all round keys.
+// - key:The 128-bit cipher key used to derive the round keys.
 //
 // Outputs:
-// round_keys:Array of 11 round keys, each 128 bits.
+// - round_keys: Array of 11 round keys, each 128 bits.
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -35,9 +35,7 @@ module key_expansion(
     
     logic [31:0] tmp;
     int i;
-    
 
-    
     // Generates round constant, modifying first byte for each round key
     // https://en.wikipedia.org/wiki/AES_key_schedule
     function logic [31:0] rcon(input int round);
