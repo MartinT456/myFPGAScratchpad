@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_key_expansion_behav/xsimk.exe -simmode gui -wdb tb_key_expansion_behav.wdb -simrunnum 0 -socket 52132
+Running: xsim.dir/tb_key_expansion_behav/xsimk.exe -simmode gui -wdb tb_key_expansion_behav.wdb -simrunnum 0 -socket 63309
 Design successfully loaded
-Design Loading Memory Usage: 26976 KB (Peak: 26976 KB)
-Design Loading CPU Usage: 733 ms
+Design Loading Memory Usage: 26972 KB (Peak: 26972 KB)
+Design Loading CPU Usage: 749 ms
 Simulation completed
-Simulation Memory Usage: 27636 KB (Peak: 27636 KB)
-Simulation CPU Usage: 812 ms
+Simulation Memory Usage: 27612 KB (Peak: 27612 KB)
+Simulation CPU Usage: 780 ms

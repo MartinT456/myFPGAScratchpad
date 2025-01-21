@@ -34,7 +34,7 @@ module key_expansion(
     );
     
     logic [31:0] tmp;
-    int i;
+    
 
     // Generates round constant, modifying first byte for each round key
     // https://en.wikipedia.org/wiki/AES_key_schedule
@@ -106,7 +106,20 @@ module key_expansion(
             subword[j*8+:8] = sbox(byte_in);
         end
     endfunction
+
+    always_comb begin
     
+        round_keys[0] = key; // Initial key
+        for (int i = 1; i < 11; i = i + 1) begin
+        // https://en.wikipedia.org/wiki/AES_key_schedule#/media/File:AES-Key_Schedule_128-bit_key.svg
+            tmp = subword({round_keys[i-1][23:0], round_keys[i-1][31:24]}) ^ rcon(i); // rotate word, take subword, XOR with round constant
+            round_keys[i][127:96] = round_keys[i-1][127:96] ^ tmp;
+            round_keys[i][95:64] = round_keys[i-1][95:64] ^ round_keys[i][127:96];
+            round_keys[i][63:32] = round_keys[i-1][63:32] ^ round_keys[i][95:64];
+            round_keys[i][31:0] = round_keys[i-1][31:0] ^ round_keys[i][63:32];
+        end
+    end
+    /*
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             for (i = 0; i < 11; i = i + 1)
@@ -123,5 +136,6 @@ module key_expansion(
             end
         end
     end
+    */
     
 endmodule

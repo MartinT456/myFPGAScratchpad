@@ -82,6 +82,12 @@ module aes_core(
         .round_keys(round_keys)
     );
     
+    /*
+       Module instances takes current state as input to sub_bytes, permutes/transforms
+       the state for one round of exncryption and stores result in mix_columns_out.
+      (Except for round 10, which does not use the MixColumns step)
+    */   
+       
     sub_bytes inst_sub_bytes(.state_in(state), .state_out(sub_bytes_out));
     shift_rows inst_shift_rows(.state_in(sub_bytes_out), .state_out(shift_rows_out));
     mix_columns inst_mix_columns(.state_in(shift_rows_out), .state_out(mix_columns_out));
@@ -100,9 +106,11 @@ module aes_core(
                 state <= mix_columns_out ^ round_keys[round];
                 round <= round + 1;
             end else if (round == 10) begin
-                state <= shift_rows_out ^ round_keys[10]; // Final round (does not use MixColumns as per AES standard)
+                state <= shift_rows_out ^ round_keys[10]; // Final round (does not use MixColumns as per AES standard)      
+                round <= round + 1; // Allow one more clock cycle for signals to propagate before loading state to ciphertext
+            end else begin
                 ciphertext <= state; // Final ciphertext output
-                round <= 0; // Reset round for the next encryption
+                round <= 0;
             end
         end
     end

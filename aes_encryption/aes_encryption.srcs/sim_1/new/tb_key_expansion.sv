@@ -37,10 +37,11 @@ module tb_key_expansion;
     initial begin
         // Initialize signals
         clk = 0;
-        reset = 1;
+        reset = 0;
         key = 128'b0;
 
         // Apply Reset
+        #10 reset = 1;
         #10 reset = 0;
         #50;
         @(posedge clk); // Wait for one clock edge
@@ -57,11 +58,14 @@ module tb_key_expansion;
             0ef903333ba9613897060a04511dfa9f
             b1d4d8e28a7db9da1d7bb3de4c664941
             b4ef5bcb3e92e21123e951cf6f8f188e   */
-            
+        
+        #10 key = 128'h0000000000000000000000000000; // All zeroes key
+        #50
         $display("Test 1: Key = %h", key);
         for (int i = 0; i < 11; i++) begin
             $display("Round %0d Key: %h", i, round_keys[i]);
         end
+
         
         /*
          Test case 2 expected result:
@@ -78,8 +82,8 @@ module tb_key_expansion;
          d60a3588e472f07b82d2d7858cd7c326 */
         
         #10 key = 128'hffffffffffffffffffffffffffffffff; // All ones key
-        #50
-        @(posedge clk);
+        #50   
+        @(posedge clk); 
         $display("Test 2: Key = %h", key);
         for (int i = 0; i < 11; i++) begin
             $display("Round %0d Key: %h", i, round_keys[i]);
